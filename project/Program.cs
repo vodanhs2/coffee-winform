@@ -1,4 +1,5 @@
-﻿using System;
+﻿using project.Forms.FormChildsOrder;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -8,17 +9,20 @@ namespace project
 {
     static class Program
     {
+        public static admin ad;
+        public static employee em;
         /// <summary>
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-       
+
         static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PnlShadow());
-           
+            Application.Run(new login());
+            //PnlShadow()
+
         }
     }
 }

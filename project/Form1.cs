@@ -14,11 +14,30 @@ namespace project
 {
     public partial class PnlShadow : Form
     {
+        public static PnlShadow pnlshadow;
+        public static string nameTitle;
         private IconButton currentBtn;
         private Form currentChildForm;
         public PnlShadow()
         {
+            pnlshadow = this;
             InitializeComponent();
+            if (Program.ad != null)
+            {
+                txtName.Text = Convert.ToString(Program.ad.username);
+            }
+            if (Program.em != null)
+            {
+                txtName.Text = Convert.ToString(Program.em.username);
+            }
+            LoadTitle();
+        }
+        public void LoadTitle()
+        {
+             if (nameTitle != null)
+            {
+                lbHome.Text = nameTitle;
+            }
         }
 
         bool mnuExpanded = false;
@@ -143,10 +162,23 @@ namespace project
             lbHome.Text = "Home";
         }
 
-        private void pictureBox1_Click(object sender, EventArgs e)
+        private void PnlShadow_FormClosed(object sender, FormClosedEventArgs e)
         {
-            currentChildForm.Close();
-            Reset();
+            Application.Exit();
+        }
+
+        private void iconPictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+
+
+        private void iconButton7_Click(object sender, EventArgs e)
+        {
+            login lo = new login();
+            lo.Show();
+            this.Dispose();
         }
     }
 }

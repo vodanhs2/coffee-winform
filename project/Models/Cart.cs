@@ -12,7 +12,7 @@ namespace project.Models
 {
     class Cart
     {
-      
+
         DataClasses1DataContext db = new DataClasses1DataContext();
         public order getTableId(int id)
         {
@@ -29,7 +29,6 @@ namespace project.Models
                 or.table_id = item.table_id;
                 or.create_at = item.create_at;
                 or.discount = item.discount;
-                or.emp_id = item.id;
                 or.total_price = item.total_price;
                 or.status = item.status;
 
@@ -41,9 +40,9 @@ namespace project.Models
             db.Refresh(System.Data.Linq.RefreshMode.KeepChanges, db.orders);
             int id = 0;
             var sql = from o in db.orders
-                        where o.table_id == table_id
-                        where o.status == 0
-                        select o;
+                      where o.table_id == table_id
+                      where o.status == 0
+                      select o;
             if (sql.Count() > 0)
             {
                 foreach (var item in sql)
@@ -53,10 +52,10 @@ namespace project.Models
             }
             return id;
         }
-     public List<order_detail> getDsOrder(int order_id)
+        public List<order_detail> getDsOrder(int order_id)
         {
-           
-            List<order_detail> lsDetails= new List<order_detail>();
+
+            List<order_detail> lsDetails = new List<order_detail>();
             db.Refresh(System.Data.Linq.RefreshMode.KeepChanges, db.order_details);
             db.Refresh(System.Data.Linq.RefreshMode.KeepChanges, db.products);
             var sql = from d in db.order_details
@@ -70,17 +69,18 @@ namespace project.Models
                           name = p.name,
                           price = p.price
                       };
-            if(sql.Count()>0) {
-            foreach (var item in sql)
+            if (sql.Count() > 0)
             {
-                order_detail order = new order_detail();
+                foreach (var item in sql)
+                {
+                    order_detail order = new order_detail();
 
-                order.pro_id = item.pro_id;
-                order.order_id = item.order_id;
-                order.price = item.price;
-                order.quantity = item.quantity;
-                lsDetails.Add(order);
-            }
+                    order.pro_id = item.pro_id;
+                    order.order_id = item.order_id;
+                    order.price = item.price;
+                    order.quantity = item.quantity;
+                    lsDetails.Add(order);
+                }
             }
             return lsDetails;
 
@@ -94,29 +94,30 @@ namespace project.Models
                       where o.table_id == table_id
                       where o.status == 0
                       where d.order_id == order_id
-                      select new { d.pro_id } ;
-            if(sql != null) { 
-            foreach (var item in sql)
+                      select new { d.pro_id };
+            if (sql != null)
             {
-                n++;
-            }
+                foreach (var item in sql)
+                {
+                    n++;
+                }
             }
             return n;
         }
         public int deletePro(int pro_id, int id, int table_id)
         {
             int check = 0;
-          
-                var sql = from d in db.order_details
-                          where d.pro_id == pro_id
-                          where d.order_id == id
-                          select d;
-         
-                foreach (var item in sql)
-                {
-               
+
+            var sql = from d in db.order_details
+                      where d.pro_id == pro_id
+                      where d.order_id == id
+                      select d;
+
+            foreach (var item in sql)
+            {
+
                 db.order_details.DeleteOnSubmit(item);
-                       
+
             }
             try
             {
@@ -128,27 +129,27 @@ namespace project.Models
 
                 throw;
             }
-           
 
-            if (CheckLsProduct(id,table_id) == 0)
-                {
-                    check = 2;
-                }
-          
-            
+
+            if (CheckLsProduct(id, table_id) == 0)
+            {
+                check = 2;
+            }
+
+
             return check;
-          
+
         }
         public void CancelOrder(int order_id)
         {
-            
-                var sql = from o in db.orders
-                          where o.id == order_id
-                          select o;
-                foreach (var item in sql)
-                {
-                    db.orders.DeleteOnSubmit(item);
-                }
+
+            var sql = from o in db.orders
+                      where o.id == order_id
+                      select o;
+            foreach (var item in sql)
+            {
+                db.orders.DeleteOnSubmit(item);
+            }
             try
             {
                 db.SubmitChanges();
@@ -160,7 +161,7 @@ namespace project.Models
             }
 
         }
-      
-       
+
+
     }
 }

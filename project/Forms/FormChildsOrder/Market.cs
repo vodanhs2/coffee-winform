@@ -13,7 +13,7 @@ using System.Windows.Forms;
 
 namespace project.Forms.FormChildsOrder
 {
-   
+
     public partial class Market : Form
     {
         public static Market market;
@@ -22,15 +22,17 @@ namespace project.Forms.FormChildsOrder
         private string name;
         private int status;
         private int order_id;
-        private double price= 0;
-        private decimal totalprice=0;
+        private double price = 0;
+        private decimal totalprice = 0;
         Cart cart = new Cart();
+        List<order> lsorders;
         List<order_detail> lsorder_Details;
-      
-        public Market(int id,string name,int status)
+
+        public Market(int id, string name, int status)
         {
-            
+
             InitializeComponent();
+            lsorders = new List<order>();
             market = this;
             this.id = id;
             this.name = name;
@@ -38,10 +40,11 @@ namespace project.Forms.FormChildsOrder
             pnlsProduct.Visible = false;
             pnlPayment.Visible = false;
             NameTable.Text = name;
-           
+
             order orders = cart.getTableId(id);
-          
-            if(orders != null) {
+
+            if (orders != null)
+            {
                 lsorder_Details = cart.getDsOrder(orders.id);
                 fillLsProduct(0);
                 order_id = orders.id;
@@ -54,7 +57,7 @@ namespace project.Forms.FormChildsOrder
                     break;
                 case 2:
                     lblStatus.Text = "Đang phục vụ";
-                    btnBook.Visible=false;
+                    btnBook.Visible = false;
                     btnBack.Visible = false;
                     OpenChildForm(new Product(id));
 
@@ -72,12 +75,12 @@ namespace project.Forms.FormChildsOrder
 
             order or = cart.getTableId(id);
             order_id = or.id;
-            int ck = cart.CheckLsProduct(order_id,id);
-            
+            int ck = cart.CheckLsProduct(order_id, id);
+
             btnOrder.Visible = true;
-            if (ck==0)
+            if (ck == 0)
             {
-                
+
                 btnOrder.Visible = false;
                 CancelOrder();
             }
@@ -107,16 +110,16 @@ namespace project.Forms.FormChildsOrder
             }
             else
             {
-                totalprice = (decimal) price;
-                    lblTotal.Text = "" + totalprice.ToString("#,###,###") + " VND";
+                totalprice = (decimal)price;
+                lblTotal.Text = "" + totalprice.ToString("#,###,###") + " VND";
             }
 
 
         }
         public void fillLsProduct(int id_order)
         {
-          
-          
+
+
             if (id_order != 0)
             {
                 lsorder_Details = cart.getDsOrder(id_order);
@@ -124,8 +127,9 @@ namespace project.Forms.FormChildsOrder
                 price = 0;
             }
             this.order_id = id_order;
-            if (lsorder_Details != null) { 
-               
+            if (lsorder_Details != null)
+            {
+
                 pnlsProduct.Visible = true;
                 pnlPayment.Visible = true;
                 btnOrder.Text = "Thanh toán";
@@ -140,23 +144,23 @@ namespace project.Forms.FormChildsOrder
                 pnlsProduct.Controls.Clear();
                 foreach (var item in lsorder_Details)
                 {
-                    var product = db.products.SingleOrDefault(x=>x.id==item.pro_id);
-                    price += Convert.ToDouble(item.price * item.quantity); 
+                    var product = db.products.SingleOrDefault(x => x.id == item.pro_id);
+                    price += Convert.ToDouble(item.price * item.quantity);
 
                     // 
                     // IconClose
                     // 
                     IconPictureBox icon = new IconPictureBox();
-                  icon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
-                   icon.ForeColor = System.Drawing.Color.Red;
-                   icon.IconChar = FontAwesome.Sharp.IconChar.Times;
-                   icon.IconColor = System.Drawing.Color.Red;
-                   icon.IconSize = 17;
-                   icon.Location = new System.Drawing.Point(258, 9);
-                   icon.Name = "IconClose";
-                   icon.Size = new System.Drawing.Size(29, 17);
-                   icon.TabIndex = 1;
-                   icon.TabStop = false;
+                    icon.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(34)))), ((int)(((byte)(33)))), ((int)(((byte)(74)))));
+                    icon.ForeColor = System.Drawing.Color.Red;
+                    icon.IconChar = FontAwesome.Sharp.IconChar.Times;
+                    icon.IconColor = System.Drawing.Color.Red;
+                    icon.IconSize = 17;
+                    icon.Location = new System.Drawing.Point(258, 9);
+                    icon.Name = "IconClose";
+                    icon.Size = new System.Drawing.Size(29, 17);
+                    icon.TabIndex = 1;
+                    icon.TabStop = false;
                     // 
                     // lblquantityPro
                     // 
@@ -168,19 +172,19 @@ namespace project.Forms.FormChildsOrder
                     lblQuantity.Name = Convert.ToString(item.pro_id);
                     lblQuantity.Size = new System.Drawing.Size(26, 17);
                     lblQuantity.TabIndex = 0;
-                    lblQuantity.Text = "x "+item.quantity;
+                    lblQuantity.Text = "x " + item.quantity;
                     // 
                     // lblpricePro
                     // 
                     Label lblPrice = new Label();
-                   lblPrice.AutoSize = true;
-                   lblPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                   lblPrice.ForeColor = System.Drawing.Color.Red;
-                   lblPrice.Location = new System.Drawing.Point(89, 9);
-                   lblPrice.Name = Convert.ToString(item.pro_id);
-                   lblPrice.Size = new System.Drawing.Size(76, 17);
-                   lblPrice.TabIndex = 0;
-                   lblPrice.Text = ""+item.price+" VND";
+                    lblPrice.AutoSize = true;
+                    lblPrice.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                    lblPrice.ForeColor = System.Drawing.Color.Red;
+                    lblPrice.Location = new System.Drawing.Point(89, 9);
+                    lblPrice.Name = Convert.ToString(item.pro_id);
+                    lblPrice.Size = new System.Drawing.Size(76, 17);
+                    lblPrice.TabIndex = 0;
+                    lblPrice.Text = "" + item.price + " VND";
                     // 
                     // lblNamePro
                     // 
@@ -213,7 +217,7 @@ namespace project.Forms.FormChildsOrder
                     icon.Tag = item;
                     pn.Tag = item;
                     pnlsProduct.Controls.Add(pn);
-            }
+                }
                 fillHome();
             }
             SumPrice.Text = Convert.ToString(price);
@@ -225,12 +229,12 @@ namespace project.Forms.FormChildsOrder
         {
             order_detail or = ((sender as IconPictureBox).Tag) as order_detail;
             var product = db.products.SingleOrDefault(x => x.id == or.pro_id);
-            DialogResult dialog = MessageBox.Show("Hủy sản phẩm: " + product.name + " ?", "Hủy sản phẩm: "+product.name+" ?", MessageBoxButtons.YesNoCancel,
+            DialogResult dialog = MessageBox.Show("Hủy sản phẩm: " + product.name + " ?", "Hủy sản phẩm: " + product.name + " ?", MessageBoxButtons.YesNoCancel,
         MessageBoxIcon.Information);
-        if(dialog == DialogResult.Yes)
+            if (dialog == DialogResult.Yes)
             {
                 int delete = cart.deletePro(Convert.ToInt32(or.pro_id), Convert.ToInt32(or.order_id), id);
-             
+
                 if (delete == 1)
                 {
                     fillLsProduct(this.order_id);
@@ -247,7 +251,7 @@ namespace project.Forms.FormChildsOrder
         {
             order_detail or = ((sender as Panel).Tag) as order_detail;
             var product = db.products.SingleOrDefault(x => x.id == or.pro_id);
-            Quantity qty = new Quantity(Convert.ToInt32(or.pro_id), product.name,Convert.ToDouble(or.price),id);
+            Quantity qty = new Quantity(Convert.ToInt32(or.pro_id), product.name, Convert.ToDouble(or.price), id);
             qty.ShowDialog();
         }
 
@@ -267,20 +271,20 @@ namespace project.Forms.FormChildsOrder
 
         private void BtnHuy_Click(object sender, EventArgs e)
         {
-           coffee_table tables = db.coffee_tables.Single(x => x.id == id);
+            coffee_table tables = db.coffee_tables.Single(x => x.id == id);
             tables.status = 1;
             db.SubmitChanges();
             Orders.order.LoadTable();
             this.Dispose();
             cart.CancelOrder(this.order_id);
-            
+
         }
 
         DateTime today = DateTime.Now;
-       
+
         private void Market_Load(object sender, EventArgs e)
         {
-           
+
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -290,7 +294,7 @@ namespace project.Forms.FormChildsOrder
                 lblTime.Text = "_ _ _";
                 lblStatus.Text = "Trống";
                 btnOrder.Text = "Gọi món";
-                btnBook.Visible=true;
+                btnBook.Visible = true;
                 PnlProduct.Controls.Clear();
                 coffee_table tables = db.coffee_tables.Single(x => x.id == id);
                 tables.status = 1;
@@ -298,19 +302,23 @@ namespace project.Forms.FormChildsOrder
                 Orders.order.LoadTable();
                 return;
             }
-            if (btnOrder.Text== "Gọi món") {
+            if (btnOrder.Text == "Gọi món")
+            {
                 lblTime.Text = Convert.ToString(today);
                 lblStatus.Text = "Đang phục vụ";
                 btnOrder.Text = "Hủy bàn";
-                btnBook.Visible =false;
-          
-            OpenChildForm(new Product(id));
+                btnBook.Visible = false;
+
+                OpenChildForm(new Product(id));
             }
-          
+
             if (btnOrder.Text == "Thanh toán")
             {
-                Payment pay = new Payment(Convert.ToDouble(totalprice),name,id,order_id);
-                pay.ShowDialog();
+                order or = db.orders.Single(x => x.id == order_id);
+                lsorders.Add(or);
+                CheckPayment check = new CheckPayment(Convert.ToDouble(totalprice), lsorders);
+
+                check.ShowDialog();
             }
         }
         private void OpenChildForm(Form childForm)
@@ -336,8 +344,18 @@ namespace project.Forms.FormChildsOrder
 
         private void pnlSell_MouseClick(object sender, MouseEventArgs e)
         {
-            Sell sell = new Sell(order_id,name,price);
+            Sell sell = new Sell(order_id, name, price);
             sell.ShowDialog();
+        }
+
+        private void btnBook_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pnlSell_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

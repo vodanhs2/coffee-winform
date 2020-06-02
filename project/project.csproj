@@ -74,6 +74,24 @@
     <Compile Include="Forms\Dashboard.Designer.cs">
       <DependentUpon>Dashboard.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormChildsDashboard\OrderPrice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormChildsDashboard\OrderPrice.Designer.cs">
+      <DependentUpon>OrderPrice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormChildsOrder\CheckPayment.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormChildsOrder\CheckPayment.Designer.cs">
+      <DependentUpon>CheckPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FormChildsOrder\LsOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormChildsOrder\LsOrder.Designer.cs">
+      <DependentUpon>LsOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FormChildsOrder\Market.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -104,6 +122,12 @@
     <Compile Include="Forms\FormChildsOrder\Sell.Designer.cs">
       <DependentUpon>Sell.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FormChildsOrder\SellManyOrder.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FormChildsOrder\SellManyOrder.Designer.cs">
+      <DependentUpon>SellManyOrder.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\Orders.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -115,6 +139,12 @@
     </Compile>
     <Compile Include="Forms\Settings.Designer.cs">
       <DependentUpon>Settings.cs</DependentUpon>
+    </Compile>
+    <Compile Include="login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="login.Designer.cs">
+      <DependentUpon>login.cs</DependentUpon>
     </Compile>
     <Compile Include="Models\Cart.cs" />
     <Compile Include="Program.cs" />
@@ -202,5 +232,6 @@
   <ItemGroup>
     <None Include="Resources\Dự án mới.png" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
