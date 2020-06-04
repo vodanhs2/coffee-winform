@@ -82,7 +82,7 @@ namespace project.Forms
         private void iconButton2_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColors.color2);
-            OpenChildForm(new Dashboard());
+            OpenChildForm(new RevEmployee());
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
@@ -95,6 +95,11 @@ namespace project.Forms
         {
             ActiveButton(sender, RBGColors.color4);
             OpenChildForm(new Dashboard());
+        }
+
+        private void Dashboard_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

@@ -57,3 +57,58 @@ C:\Users\chien\Desktop\New folder\coffee-winform\project\bin\Debug\FontAwesome.S
 C:\Users\chien\Desktop\New folder\coffee-winform\project\bin\Debug\VisualReactiveWinForms.dll
 C:\Users\chien\Desktop\New folder\coffee-winform\project\bin\Debug\VisualReactiveWinForms.xml
 C:\Users\chien\Desktop\New folder\coffee-winform\project\obj\Debug\project.csproj.CopyComplete
+C:\Users\chien\Desktop\ss\coffee-winform\project\bin\Debug\project.exe.config
+C:\Users\chien\Desktop\ss\coffee-winform\project\bin\Debug\project.exe
+C:\Users\chien\Desktop\ss\coffee-winform\project\bin\Debug\project.pdb
+C:\Users\chien\Desktop\ss\coffee-winform\project\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\chien\Desktop\ss\coffee-winform\project\bin\Debug\VisualReactiveWinForms.dll
+C:\Users\chien\Desktop\ss\coffee-winform\project\bin\Debug\VisualReactiveWinForms.xml
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.csprojAssemblyReference.cache
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.PnlShadow.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.Forms.Dashboard.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Market.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Payment.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Product.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Quantity.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Sell.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.Forms.Orders.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.subMenu.resources
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.csproj.CopyComplete
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.exe
+C:\Users\chien\Desktop\ss\coffee-winform\project\obj\Debug\project.pdb
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\project.exe.config
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\project.exe
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\project.pdb
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\LiveCharts.dll
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\LiveCharts.WinForms.dll
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\LiveCharts.Wpf.dll
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\VisualReactiveWinForms.dll
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\LiveCharts.pdb
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\LiveCharts.xml
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\LiveCharts.WinForms.pdb
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\LiveCharts.WinForms.xml
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\LiveCharts.Wpf.pdb
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\LiveCharts.Wpf.xml
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\bin\Debug\VisualReactiveWinForms.xml
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.csprojAssemblyReference.cache
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.PnlShadow.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Forms.Dashboard.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Forms.FormChildsDashboard.OrderPrice.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Market.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Payment.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Product.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Quantity.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Forms.FormChildsOrder.Sell.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Forms.Orders.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Properties.Resources.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.subMenu.resources
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.csproj.GenerateResource.cache
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.csproj.CoreCompileInputs.cache
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.csproj.CopyComplete
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.exe
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.pdb
+C:\Users\chien\Desktop\New folder (2)\coffee-winform\project\obj\Debug\project.Forms.FormChildsDashboard.RevEmployee.resources

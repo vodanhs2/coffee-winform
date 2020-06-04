@@ -171,6 +171,34 @@ namespace project
 				return this.GetTable<order>();
 			}
 		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTotalOrdersByMonth")]
+		public ISingleResult<GetTotalOrdersByMonthResult> GetTotalOrdersByMonth()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetTotalOrdersByMonthResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTotalByEmpDAY")]
+		public ISingleResult<GetTotalByEmpDAYResult> GetTotalByEmpDAY()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetTotalByEmpDAYResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTotalByEmpMonth")]
+		public ISingleResult<GetTotalByEmpMonthResult> GetTotalByEmpMonth()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetTotalByEmpMonthResult>)(result.ReturnValue));
+		}
+		
+		[global::System.Data.Linq.Mapping.FunctionAttribute(Name="dbo.GetTotalByEmpYear")]
+		public ISingleResult<GetTotalByEmpYearResult> GetTotalByEmpYear()
+		{
+			IExecuteResult result = this.ExecuteMethodCall(this, ((MethodInfo)(MethodInfo.GetCurrentMethod())));
+			return ((ISingleResult<GetTotalByEmpYearResult>)(result.ReturnValue));
+		}
 	}
 	
 	[global::System.Data.Linq.Mapping.TableAttribute(Name="dbo.admin")]
@@ -2491,6 +2519,722 @@ namespace project
 		{
 			this.SendPropertyChanging();
 			entity.order = null;
+		}
+	}
+	
+	public partial class GetTotalOrdersByMonthResult
+	{
+		
+		private System.Nullable<int> _month;
+		
+		private System.Nullable<double> _total;
+		
+		public GetTotalOrdersByMonthResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_month", DbType="Int")]
+		public System.Nullable<int> month
+		{
+			get
+			{
+				return this._month;
+			}
+			set
+			{
+				if ((this._month != value))
+				{
+					this._month = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Float")]
+		public System.Nullable<double> total
+		{
+			get
+			{
+				return this._total;
+			}
+			set
+			{
+				if ((this._total != value))
+				{
+					this._total = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetTotalByEmpDAYResult
+	{
+		
+		private int _id;
+		
+		private string _name;
+		
+		private string _username;
+		
+		private string _password;
+		
+		private bool _gender;
+		
+		private long _card;
+		
+		private System.Nullable<System.DateTime> _birthday;
+		
+		private string _phone;
+		
+		private string _email;
+		
+		private string _address;
+		
+		private System.Nullable<int> _emp_id;
+		
+		private System.Nullable<double> _total;
+		
+		public GetTotalByEmpDAYResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string username
+		{
+			get
+			{
+				return this._username;
+			}
+			set
+			{
+				if ((this._username != value))
+				{
+					this._username = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string password
+		{
+			get
+			{
+				return this._password;
+			}
+			set
+			{
+				if ((this._password != value))
+				{
+					this._password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gender", DbType="Bit NOT NULL")]
+		public bool gender
+		{
+			get
+			{
+				return this._gender;
+			}
+			set
+			{
+				if ((this._gender != value))
+				{
+					this._gender = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_card", DbType="BigInt NOT NULL")]
+		public long card
+		{
+			get
+			{
+				return this._card;
+			}
+			set
+			{
+				if ((this._card != value))
+				{
+					this._card = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_birthday", DbType="Date")]
+		public System.Nullable<System.DateTime> birthday
+		{
+			get
+			{
+				return this._birthday;
+			}
+			set
+			{
+				if ((this._birthday != value))
+				{
+					this._birthday = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="VarChar(30)")]
+		public string phone
+		{
+			get
+			{
+				return this._phone;
+			}
+			set
+			{
+				if ((this._phone != value))
+				{
+					this._phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(100)")]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this._email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_address", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string address
+		{
+			get
+			{
+				return this._address;
+			}
+			set
+			{
+				if ((this._address != value))
+				{
+					this._address = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_emp_id", DbType="Int")]
+		public System.Nullable<int> emp_id
+		{
+			get
+			{
+				return this._emp_id;
+			}
+			set
+			{
+				if ((this._emp_id != value))
+				{
+					this._emp_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Float")]
+		public System.Nullable<double> total
+		{
+			get
+			{
+				return this._total;
+			}
+			set
+			{
+				if ((this._total != value))
+				{
+					this._total = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetTotalByEmpMonthResult
+	{
+		
+		private int _id;
+		
+		private string _name;
+		
+		private string _username;
+		
+		private string _password;
+		
+		private bool _gender;
+		
+		private long _card;
+		
+		private System.Nullable<System.DateTime> _birthday;
+		
+		private string _phone;
+		
+		private string _email;
+		
+		private string _address;
+		
+		private System.Nullable<int> _emp_id;
+		
+		private System.Nullable<double> _total;
+		
+		public GetTotalByEmpMonthResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string username
+		{
+			get
+			{
+				return this._username;
+			}
+			set
+			{
+				if ((this._username != value))
+				{
+					this._username = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string password
+		{
+			get
+			{
+				return this._password;
+			}
+			set
+			{
+				if ((this._password != value))
+				{
+					this._password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gender", DbType="Bit NOT NULL")]
+		public bool gender
+		{
+			get
+			{
+				return this._gender;
+			}
+			set
+			{
+				if ((this._gender != value))
+				{
+					this._gender = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_card", DbType="BigInt NOT NULL")]
+		public long card
+		{
+			get
+			{
+				return this._card;
+			}
+			set
+			{
+				if ((this._card != value))
+				{
+					this._card = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_birthday", DbType="Date")]
+		public System.Nullable<System.DateTime> birthday
+		{
+			get
+			{
+				return this._birthday;
+			}
+			set
+			{
+				if ((this._birthday != value))
+				{
+					this._birthday = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="VarChar(30)")]
+		public string phone
+		{
+			get
+			{
+				return this._phone;
+			}
+			set
+			{
+				if ((this._phone != value))
+				{
+					this._phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(100)")]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this._email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_address", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string address
+		{
+			get
+			{
+				return this._address;
+			}
+			set
+			{
+				if ((this._address != value))
+				{
+					this._address = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_emp_id", DbType="Int")]
+		public System.Nullable<int> emp_id
+		{
+			get
+			{
+				return this._emp_id;
+			}
+			set
+			{
+				if ((this._emp_id != value))
+				{
+					this._emp_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Float")]
+		public System.Nullable<double> total
+		{
+			get
+			{
+				return this._total;
+			}
+			set
+			{
+				if ((this._total != value))
+				{
+					this._total = value;
+				}
+			}
+		}
+	}
+	
+	public partial class GetTotalByEmpYearResult
+	{
+		
+		private int _id;
+		
+		private string _name;
+		
+		private string _username;
+		
+		private string _password;
+		
+		private bool _gender;
+		
+		private long _card;
+		
+		private System.Nullable<System.DateTime> _birthday;
+		
+		private string _phone;
+		
+		private string _email;
+		
+		private string _address;
+		
+		private System.Nullable<int> _emp_id;
+		
+		private System.Nullable<double> _total;
+		
+		public GetTotalByEmpYearResult()
+		{
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_id", DbType="Int NOT NULL")]
+		public int id
+		{
+			get
+			{
+				return this._id;
+			}
+			set
+			{
+				if ((this._id != value))
+				{
+					this._id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_name", DbType="NVarChar(255) NOT NULL", CanBeNull=false)]
+		public string name
+		{
+			get
+			{
+				return this._name;
+			}
+			set
+			{
+				if ((this._name != value))
+				{
+					this._name = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_username", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string username
+		{
+			get
+			{
+				return this._username;
+			}
+			set
+			{
+				if ((this._username != value))
+				{
+					this._username = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_password", DbType="VarChar(30) NOT NULL", CanBeNull=false)]
+		public string password
+		{
+			get
+			{
+				return this._password;
+			}
+			set
+			{
+				if ((this._password != value))
+				{
+					this._password = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_gender", DbType="Bit NOT NULL")]
+		public bool gender
+		{
+			get
+			{
+				return this._gender;
+			}
+			set
+			{
+				if ((this._gender != value))
+				{
+					this._gender = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_card", DbType="BigInt NOT NULL")]
+		public long card
+		{
+			get
+			{
+				return this._card;
+			}
+			set
+			{
+				if ((this._card != value))
+				{
+					this._card = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_birthday", DbType="Date")]
+		public System.Nullable<System.DateTime> birthday
+		{
+			get
+			{
+				return this._birthday;
+			}
+			set
+			{
+				if ((this._birthday != value))
+				{
+					this._birthday = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_phone", DbType="VarChar(30)")]
+		public string phone
+		{
+			get
+			{
+				return this._phone;
+			}
+			set
+			{
+				if ((this._phone != value))
+				{
+					this._phone = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_email", DbType="VarChar(100)")]
+		public string email
+		{
+			get
+			{
+				return this._email;
+			}
+			set
+			{
+				if ((this._email != value))
+				{
+					this._email = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_address", DbType="NText", UpdateCheck=UpdateCheck.Never)]
+		public string address
+		{
+			get
+			{
+				return this._address;
+			}
+			set
+			{
+				if ((this._address != value))
+				{
+					this._address = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_emp_id", DbType="Int")]
+		public System.Nullable<int> emp_id
+		{
+			get
+			{
+				return this._emp_id;
+			}
+			set
+			{
+				if ((this._emp_id != value))
+				{
+					this._emp_id = value;
+				}
+			}
+		}
+		
+		[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_total", DbType="Float")]
+		public System.Nullable<double> total
+		{
+			get
+			{
+				return this._total;
+			}
+			set
+			{
+				if ((this._total != value))
+				{
+					this._total = value;
+				}
+			}
 		}
 	}
 }

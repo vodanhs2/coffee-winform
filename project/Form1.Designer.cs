@@ -43,21 +43,21 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.iconButton7 = new FontAwesome.Sharp.IconButton();
+            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
+            this.txtName = new System.Windows.Forms.Label();
             this.lbHome = new System.Windows.Forms.Label();
             this.iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
-            this.txtName = new System.Windows.Forms.Label();
-            this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
-            this.iconButton7 = new FontAwesome.Sharp.IconButton();
-            this.panel4 = new System.Windows.Forms.Panel();
             this.pnlMainMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
             this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).BeginInit();
             this.SuspendLayout();
             // 
             // pnlMainMenu
@@ -74,7 +74,7 @@
             this.pnlMainMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.pnlMainMenu.Location = new System.Drawing.Point(0, 0);
             this.pnlMainMenu.Name = "pnlMainMenu";
-            this.pnlMainMenu.Size = new System.Drawing.Size(38, 455);
+            this.pnlMainMenu.Size = new System.Drawing.Size(38, 481);
             this.pnlMainMenu.TabIndex = 0;
             // 
             // iconButton6
@@ -279,8 +279,68 @@
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(38, 0);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(758, 42);
+            this.panel1.Size = new System.Drawing.Size(876, 42);
             this.panel1.TabIndex = 1;
+            // 
+            // panel4
+            // 
+            this.panel4.Controls.Add(this.iconButton7);
+            this.panel4.Controls.Add(this.iconPictureBox2);
+            this.panel4.Controls.Add(this.txtName);
+            this.bunifuTransition1.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
+            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
+            this.panel4.Location = new System.Drawing.Point(589, 0);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(287, 42);
+            this.panel4.TabIndex = 0;
+            // 
+            // iconButton7
+            // 
+            this.bunifuTransition1.SetDecoration(this.iconButton7, BunifuAnimatorNS.DecorationType.None);
+            this.iconButton7.FlatAppearance.BorderSize = 0;
+            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton7.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconButton7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.iconButton7.ForeColor = System.Drawing.Color.White;
+            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Edit;
+            this.iconButton7.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconButton7.IconSize = 22;
+            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton7.Location = new System.Drawing.Point(158, 13);
+            this.iconButton7.Name = "iconButton7";
+            this.iconButton7.Rotation = 0D;
+            this.iconButton7.Size = new System.Drawing.Size(125, 25);
+            this.iconButton7.TabIndex = 4;
+            this.iconButton7.Text = "Đăng xuất";
+            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton7.UseVisualStyleBackColor = true;
+            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
+            // 
+            // iconPictureBox2
+            // 
+            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.bunifuTransition1.SetDecoration(this.iconPictureBox2, BunifuAnimatorNS.DecorationType.None);
+            this.iconPictureBox2.ForeColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Users;
+            this.iconPictureBox2.IconColor = System.Drawing.Color.MediumPurple;
+            this.iconPictureBox2.IconSize = 22;
+            this.iconPictureBox2.Location = new System.Drawing.Point(3, 16);
+            this.iconPictureBox2.Name = "iconPictureBox2";
+            this.iconPictureBox2.Size = new System.Drawing.Size(26, 22);
+            this.iconPictureBox2.TabIndex = 2;
+            this.iconPictureBox2.TabStop = false;
+            // 
+            // txtName
+            // 
+            this.txtName.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.txtName, BunifuAnimatorNS.DecorationType.None);
+            this.txtName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtName.ForeColor = System.Drawing.Color.White;
+            this.txtName.Location = new System.Drawing.Point(31, 17);
+            this.txtName.Name = "txtName";
+            this.txtName.Size = new System.Drawing.Size(45, 17);
+            this.txtName.TabIndex = 3;
+            this.txtName.Text = "Home";
             // 
             // lbHome
             // 
@@ -315,7 +375,7 @@
             this.panel3.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel3.Location = new System.Drawing.Point(38, 42);
             this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(758, 9);
+            this.panel3.Size = new System.Drawing.Size(876, 9);
             this.panel3.TabIndex = 2;
             // 
             // panelDesktop
@@ -325,75 +385,15 @@
             this.panelDesktop.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktop.Location = new System.Drawing.Point(38, 51);
             this.panelDesktop.Name = "panelDesktop";
-            this.panelDesktop.Size = new System.Drawing.Size(758, 404);
+            this.panelDesktop.Size = new System.Drawing.Size(876, 430);
             this.panelDesktop.TabIndex = 3;
-            // 
-            // txtName
-            // 
-            this.txtName.AutoSize = true;
-            this.bunifuTransition1.SetDecoration(this.txtName, BunifuAnimatorNS.DecorationType.None);
-            this.txtName.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.ForeColor = System.Drawing.Color.White;
-            this.txtName.Location = new System.Drawing.Point(31, 17);
-            this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(45, 17);
-            this.txtName.TabIndex = 3;
-            this.txtName.Text = "Home";
-            // 
-            // iconPictureBox2
-            // 
-            this.iconPictureBox2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
-            this.bunifuTransition1.SetDecoration(this.iconPictureBox2, BunifuAnimatorNS.DecorationType.None);
-            this.iconPictureBox2.ForeColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox2.IconChar = FontAwesome.Sharp.IconChar.Users;
-            this.iconPictureBox2.IconColor = System.Drawing.Color.MediumPurple;
-            this.iconPictureBox2.IconSize = 22;
-            this.iconPictureBox2.Location = new System.Drawing.Point(3, 16);
-            this.iconPictureBox2.Name = "iconPictureBox2";
-            this.iconPictureBox2.Size = new System.Drawing.Size(26, 22);
-            this.iconPictureBox2.TabIndex = 2;
-            this.iconPictureBox2.TabStop = false;
-            // 
-            // iconButton7
-            // 
-            this.bunifuTransition1.SetDecoration(this.iconButton7, BunifuAnimatorNS.DecorationType.None);
-            this.iconButton7.FlatAppearance.BorderSize = 0;
-            this.iconButton7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.iconButton7.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
-            this.iconButton7.Font = new System.Drawing.Font("Segoe UI Semibold", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.iconButton7.ForeColor = System.Drawing.Color.White;
-            this.iconButton7.IconChar = FontAwesome.Sharp.IconChar.Edit;
-            this.iconButton7.IconColor = System.Drawing.Color.MediumPurple;
-            this.iconButton7.IconSize = 22;
-            this.iconButton7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.iconButton7.Location = new System.Drawing.Point(158, 13);
-            this.iconButton7.Name = "iconButton7";
-            this.iconButton7.Rotation = 0D;
-            this.iconButton7.Size = new System.Drawing.Size(125, 25);
-            this.iconButton7.TabIndex = 4;
-            this.iconButton7.Text = "Đăng xuất";
-            this.iconButton7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.iconButton7.UseVisualStyleBackColor = true;
-            this.iconButton7.Click += new System.EventHandler(this.iconButton7_Click);
-            // 
-            // panel4
-            // 
-            this.panel4.Controls.Add(this.iconButton7);
-            this.panel4.Controls.Add(this.iconPictureBox2);
-            this.panel4.Controls.Add(this.txtName);
-            this.bunifuTransition1.SetDecoration(this.panel4, BunifuAnimatorNS.DecorationType.None);
-            this.panel4.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel4.Location = new System.Drawing.Point(471, 0);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(287, 42);
-            this.panel4.TabIndex = 0;
             // 
             // PnlShadow
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(796, 455);
+            this.ClientSize = new System.Drawing.Size(914, 481);
             this.Controls.Add(this.panelDesktop);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel1);
@@ -408,10 +408,10 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.iconPictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconCurrentChild)).EndInit();
             this.ResumeLayout(false);
 
         }

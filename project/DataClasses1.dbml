@@ -113,4 +113,58 @@
       <Association Name="coffee_table_order" Member="coffee_table" ThisKey="table_id" OtherKey="id" Type="coffee_table" IsForeignKey="true" />
     </Type>
   </Table>
+  <Function Name="dbo.GetTotalOrdersByMonth" Method="GetTotalOrdersByMonth">
+    <ElementType Name="GetTotalOrdersByMonthResult">
+      <Column Name="month" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetTotalByEmpDAY" Method="GetTotalByEmpDAY">
+    <ElementType Name="GetTotalByEmpDAYResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="gender" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="card" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetTotalByEmpMonth" Method="GetTotalByEmpMonth">
+    <ElementType Name="GetTotalByEmpMonthResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="gender" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="card" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
+  <Function Name="dbo.GetTotalByEmpYear" Method="GetTotalByEmpYear">
+    <ElementType Name="GetTotalByEmpYearResult">
+      <Column Name="id" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="name" Type="System.String" DbType="NVarChar(255) NOT NULL" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="password" Type="System.String" DbType="VarChar(30) NOT NULL" CanBeNull="false" />
+      <Column Name="gender" Type="System.Boolean" DbType="Bit NOT NULL" CanBeNull="false" />
+      <Column Name="card" Type="System.Int64" DbType="BigInt NOT NULL" CanBeNull="false" />
+      <Column Name="birthday" Type="System.DateTime" DbType="Date" CanBeNull="true" />
+      <Column Name="phone" Type="System.String" DbType="VarChar(30)" CanBeNull="true" />
+      <Column Name="email" Type="System.String" DbType="VarChar(100)" CanBeNull="true" />
+      <Column Name="address" Type="System.String" DbType="NText" CanBeNull="true" UpdateCheck="Never" />
+      <Column Name="emp_id" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="total" Type="System.Double" DbType="Float" CanBeNull="true" />
+    </ElementType>
+  </Function>
 </Database>
