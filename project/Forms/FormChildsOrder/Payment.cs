@@ -103,6 +103,9 @@ namespace project.Forms.FormChildsOrder
             Orders.order.LoadTable();
             Orders.order.Update();
             Market.market.Close();
+            ReportOrder report = new ReportOrder();
+            report.id = order_many.First().id;
+            report.ShowDialog();
             this.Dispose();
             CheckPayment.check.Dispose();
 
