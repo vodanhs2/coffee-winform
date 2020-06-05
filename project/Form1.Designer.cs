@@ -43,6 +43,7 @@
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.bunifuTransition1 = new BunifuAnimatorNS.BunifuTransition(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblTime = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
             this.iconButton7 = new FontAwesome.Sharp.IconButton();
             this.iconPictureBox2 = new FontAwesome.Sharp.IconPictureBox();
@@ -51,6 +52,7 @@
             this.iconCurrentChild = new FontAwesome.Sharp.IconPictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panelDesktop = new System.Windows.Forms.Panel();
+            this.timer2 = new System.Windows.Forms.Timer(this.components);
             this.pnlMainMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -167,7 +169,7 @@
             this.iconButton3.Rotation = 0D;
             this.iconButton3.Size = new System.Drawing.Size(162, 41);
             this.iconButton3.TabIndex = 3;
-            this.iconButton3.Text = "Dashboard";
+            this.iconButton3.Text = "Booking";
             this.iconButton3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton3.UseVisualStyleBackColor = true;
@@ -191,7 +193,7 @@
             this.iconButton2.Rotation = 0D;
             this.iconButton2.Size = new System.Drawing.Size(162, 41);
             this.iconButton2.TabIndex = 3;
-            this.iconButton2.Text = "Dashboard";
+            this.iconButton2.Text = "Order";
             this.iconButton2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton2.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton2.UseVisualStyleBackColor = true;
@@ -272,6 +274,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(30)))), ((int)(((byte)(68)))));
+            this.panel1.Controls.Add(this.lblTime);
             this.panel1.Controls.Add(this.panel4);
             this.panel1.Controls.Add(this.lbHome);
             this.panel1.Controls.Add(this.iconCurrentChild);
@@ -281,6 +284,18 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(876, 42);
             this.panel1.TabIndex = 1;
+            // 
+            // lblTime
+            // 
+            this.lblTime.AutoSize = true;
+            this.bunifuTransition1.SetDecoration(this.lblTime, BunifuAnimatorNS.DecorationType.None);
+            this.lblTime.Font = new System.Drawing.Font("Segoe UI", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTime.ForeColor = System.Drawing.Color.White;
+            this.lblTime.Location = new System.Drawing.Point(395, 17);
+            this.lblTime.Name = "lblTime";
+            this.lblTime.Size = new System.Drawing.Size(45, 17);
+            this.lblTime.TabIndex = 2;
+            this.lblTime.Text = "label1";
             // 
             // panel4
             // 
@@ -387,6 +402,12 @@
             this.panelDesktop.Name = "panelDesktop";
             this.panelDesktop.Size = new System.Drawing.Size(876, 430);
             this.panelDesktop.TabIndex = 3;
+            this.panelDesktop.Paint += new System.Windows.Forms.PaintEventHandler(this.panelDesktop_Paint);
+            // 
+            // timer2
+            // 
+            this.timer2.Enabled = true;
+            this.timer2.Tick += new System.EventHandler(this.timer2_Tick);
             // 
             // PnlShadow
             // 
@@ -438,5 +459,7 @@
         private FontAwesome.Sharp.IconButton iconButton7;
         private FontAwesome.Sharp.IconPictureBox iconPictureBox2;
         private System.Windows.Forms.Label txtName;
+        private System.Windows.Forms.Label lblTime;
+        private System.Windows.Forms.Timer timer2;
     }
 }

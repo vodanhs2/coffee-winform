@@ -165,3 +165,5 @@ C:\Users\chien\Desktop\sf\coffee-winform\project\obj\Debug\project.csproj.CopyCo
 C:\Users\chien\Desktop\sf\coffee-winform\project\bin\Debug\AxShockwaveFlashObjects.dll
 C:\Users\chien\Desktop\sf\coffee-winform\project\bin\Debug\CrystalDecisions.Windows.Forms.dll
 C:\Users\chien\Desktop\sf\coffee-winform\project\bin\Debug\ShockwaveFlashObjects.dll
+C:\Users\chien\Desktop\sf\coffee-winform\project\obj\Debug\project.Forms.Booking.BookingInfo.resources
+C:\Users\chien\Desktop\sf\coffee-winform\project\obj\Debug\project.Forms.Booking.TableCheck.resources

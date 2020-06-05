@@ -1,5 +1,6 @@
 ﻿using FontAwesome.Sharp;
 using project.Forms;
+using project.Forms.Booking;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -14,6 +15,8 @@ namespace project
 {
     public partial class PnlShadow : Form
     {
+        DataClasses1DataContext db = new DataClasses1DataContext();
+        public  DateTime Date;
         public static PnlShadow pnlshadow;
         public static string nameTitle;
         private IconButton currentBtn;
@@ -22,6 +25,7 @@ namespace project
         {
             pnlshadow = this;
             InitializeComponent();
+           
             if (Program.ad != null)
             {
                 txtName.Text = Convert.ToString(Program.ad.username);
@@ -30,8 +34,11 @@ namespace project
             {
                 txtName.Text = Convert.ToString(Program.em.username);
             }
+            timer2.Start();
+            lblTime.Text = DateTime.Now.ToString("HH:mm::ss dd-MM-yyyy");
             LoadTitle();
         }
+  
         public void LoadTitle()
         {
              if (nameTitle != null)
@@ -43,6 +50,7 @@ namespace project
         bool mnuExpanded = false;
         private void timer1_Tick(object sender, EventArgs e)
         {
+            
             if (!bunifuTransition1.IsCompleted) return;
             if (pnlMainMenu.ClientRectangle.Contains(PointToClient(Control.MousePosition)))
             {
@@ -137,6 +145,7 @@ namespace project
         private void iconButton3_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RBGColors.color3);
+            OpenChildForm(new BookingInfo());
         }
 
         private void iconButton4_Click(object sender, EventArgs e)
@@ -179,6 +188,18 @@ namespace project
             login lo = new login();
             lo.Show();
             this.Dispose();
+        }
+
+        private void panelDesktop_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            lblTime.Text = DateTime.Now.ToString("HH:mm::ss dd-MM-yyyy");
+         
+            timer2.Start();
         }
     }
 }
